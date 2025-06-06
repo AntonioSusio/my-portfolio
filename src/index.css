@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+
+/* Layout */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.app-wrapper {
+  border: 1px solid red;
+  min-height: 100vh;
+}

@@ -8,8 +8,6 @@ export default function Header() {
     setMenu(true);
   }
 
-  console.log(menu);
-
   return (
     <header className="header flex">
       <div className="left-container">
@@ -17,7 +15,7 @@ export default function Header() {
         <h2 className="heading-role">Frontend developer</h2>
       </div>
 
-      <button onClick={openMenu} className="menu-button">
+      <button onClick={openMenu} className="open-menu-button flex flex-col">
         <span className="hamburger-menu-string-1"></span>
         <span className="hamburger-menu-string-2"></span>
         <span className="hamburger-menu-string-3"></span>

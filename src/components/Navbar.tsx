@@ -26,8 +26,7 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
       <ul className="links-list flex flex-col">
         <li>
           <NavLink
-            end
-            to="about"
+            to="/"
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
           >
             About Me

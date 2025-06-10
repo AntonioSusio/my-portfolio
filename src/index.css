@@ -35,7 +35,7 @@ body {
 }
 
 .links-list li > a {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--primary-color);
 }
 
@@ -47,17 +47,22 @@ p {
   margin: 0;
 }
 
-button {
-  border: none;
-  background: transparent;
-}
-
 .hamburger-menu-string-1,
 .hamburger-menu-string-2,
 .hamburger-menu-string-3 {
   width: 20px;
   height: 3px;
   background-color: var(--secondary-color);
+}
+
+header,
+footer {
+  padding: 1rem;
+}
+
+button {
+  border: none;
+  background: transparent;
 }
 
 a {
@@ -132,6 +137,10 @@ a {
   padding: 0;
   align-items: center;
   gap: 1.5rem;
+}
+
+.links-list li > a {
+  transition: .2s ease-in-out;
 }
 
 .footer {

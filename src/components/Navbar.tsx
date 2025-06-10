@@ -1,3 +1,4 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 type MenuProps = {
@@ -6,9 +7,16 @@ type MenuProps = {
 };
 
 export default function Navbar({ menu, setMenu }: MenuProps) {
+  const activeStyles = {
+    fontSize: "2rem",
+    textDecoration: "underline",
+    textShadow: "1px 2px 15px var(--primary-color)",
+  };
+
   function closeMenu() {
     setMenu(false);
   }
+
   return (
     <nav className={`header-navbar ${menu ? "menu-open" : ""} flex flex-col`}>
       <button className="close-menu-button" onClick={closeMenu}>
@@ -17,16 +25,37 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
 
       <ul className="links-list flex flex-col">
         <li>
-          <NavLink to="">About Me</NavLink>
+          <NavLink
+            end
+            to="about"
+            style={({ isActive }) => (isActive ? activeStyles : undefined)}
+          >
+            About Me
+          </NavLink>
         </li>
         <li>
-          <NavLink to="">Resume</NavLink>
+          <NavLink
+            to="resume"
+            style={({ isActive }) => (isActive ? activeStyles : undefined)}
+          >
+            Resume
+          </NavLink>
         </li>
         <li>
-          <NavLink to="">Projects</NavLink>
+          <NavLink
+            to="projects"
+            style={({ isActive }) => (isActive ? activeStyles : undefined)}
+          >
+            Projects
+          </NavLink>
         </li>
         <li>
-          <NavLink to="">Contact</NavLink>
+          <NavLink
+            to="contact"
+            style={({ isActive }) => (isActive ? activeStyles : undefined)}
+          >
+            Contact
+          </NavLink>
         </li>
       </ul>
     </nav>

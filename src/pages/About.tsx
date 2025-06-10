@@ -1,21 +1,26 @@
+import { Link } from "react-router-dom";
+
 export default function About() {
   return (
-    <section className="about-section">
-      <div className="card-container flex flex-col">
-        <img
-          className="card-image"
-          src="Antonio.jpg"
-          alt="Image of Antonio smiling and looking at the camera"
-        />
+    <section className="about-section flex flex-col">
+      <div className="about-description-container flex flex-col">
+        <h2 className="about-presentation">
+          <span>Hello,</span> <span>I'm Antonio</span>
+        </h2>
+        <p className="about-description">
+          I am a graduate frontend student from the Scrimba platform, with a
+          particular interest in constantly improving and discovering new things
+          about coding. I enjoy difficult challenges, even if it takes me time
+          to solve them, because I like finding and analyzing new approaches
+          that are unknown to me for solve them. I like collectible card games,
+          strategy games, rope jumping, and I am a fan of cannelloni (a typical
+          Neapolitan dish). But most importantly, I really love listening to
+          music.
+        </p>
 
-        <h1>Hello , I'm Antonio</h1>
-        <p>i'm a frontend developer</p>
-
-        <div className="social-container flex">
-          <p>github</p>
-          <p>linkedin</p>
-          <p>gmail</p>
-        </div>
+        <Link to="https://scrimba.com/home" className="scrimba-link">
+          Click here if you want discover about Scrimba
+        </Link>
       </div>
     </section>
   );

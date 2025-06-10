@@ -18,7 +18,7 @@ body {
 
 :root {
   --primary-color: #ffffff;
-  --secondary-color: #0370ff;
+  --secondary-color: #4b99ff;
 }
 
 /* Typography */
@@ -37,6 +37,10 @@ body {
 .links-list li > a {
   font-size: 1.5rem;
   color: var(--primary-color);
+}
+
+.about-presentation {
+  font-size: 2.5rem;
 }
 
 /* Layout */
@@ -85,7 +89,9 @@ a {
 .main-section {
   border: 1px solid blue;
   flex: 1;
-  background-color: #75b1ff;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  gap: 1rem;
 }
 
 /* Header */
@@ -146,29 +152,76 @@ a {
 
 /* About Section */
 .about-section {
-  padding: 1rem;
-  flex: 1;
+  border: 1px solid red;
+  gap: 1rem;
 }
 
 .card-container {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   align-items: center;
   background-color: #c9e1ff;
-  filter: drop-shadow(0 0 0.3rem #4e4e4e);
+  box-shadow: 1px 1px 10px #525252;
+  gap: 1rem;
 }
 
 .card-image {
-  display: block;
   width: 250px;
   border-radius: 50%;
   border: 8px solid var(--primary-color);
 }
 
+.about-name {
+  text-align: center;
+  border-bottom: 3px solid #187cff;
+  padding-bottom: 0.4rem;
+}
+
+.about-name span {
+  display: block;
+}
+
 .social-container {
   width: 100%;
   background-color: var(--primary-color);
+  padding: 1rem 0;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+}
+
+.about-description-container {
+  background-color: #c9e1ff;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.about-presentation span{
+  display: block;
+}
+
+.about-description {
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.scrimba-link {
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+  width: fit-content;
 }
 
 .footer {
   justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .main-section {
+    flex-direction: row;
+  }
 }

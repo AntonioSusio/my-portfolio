@@ -11,19 +11,19 @@ export default function Resume() {
     setResumes(resume);
   }, []);
 
-  const resumeEl = resumes.map((item) => (
+  const resumeEl = resumes.map((resume) => (
     <div key={nanoid()} className="resume-card flex flex-col">
-      <h2 className="resume-period">{item.period}</h2>
+      <h2 className="resume-period">{resume.period}</h2>
       <h3 className="resume-istitute-info">
-        {item.schoolName} - {item.city} {item.country}
+        {resume.schoolName} - {resume.city} {resume.country}
       </h3>
-      {item.eqfLevel && <p>EQF Level - {item.eqfLevel}</p>}
-      <p>{item.description}</p>
-      <Link to={`${item.imageUrl}`} target="_blank">
+      {resume.eqfLevel && <p>EQF Level - {resume.eqfLevel}</p>}
+      <p className="resume-description">{resume.description}</p>
+      <Link to={`${resume.imageUrl}`} target="_blank">
         <img
           className="resume-img"
-          src={item.imageUrl}
-          alt={item.alternativeText}
+          src={resume.imageUrl}
+          alt={resume.alternativeText}
         />
       </Link>
     </div>

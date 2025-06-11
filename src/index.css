@@ -34,6 +34,11 @@ body {
   font-weight: bold;
 }
 
+.about-description,
+.resume-description {
+  font-weight: 500;
+}
+
 /* Header */
 .heading-role {
   font-weight: 400;
@@ -53,7 +58,6 @@ body {
 }
 
 .about-description {
-  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -79,14 +83,9 @@ p {
 .footer,
 .main-section,
 .header-navbar,
-.resume-section {
+.resume-section,
+.projects-section {
   padding: 1rem;
-}
-
-.info-card,
-.about-section,
-.resume-section {
-  background-color: #c9e1ff;
 }
 
 .hamburger-menu-string-1,
@@ -98,7 +97,8 @@ p {
 }
 
 .heading-name::before,
-.resume-heading::before {
+.resume-heading::before,
+.projects-heading::before {
   content: '';
   width: 15px;
   height: 15px;
@@ -106,6 +106,18 @@ p {
   background-color: var(--secondary-color);
   align-self: center;
   margin-right: 0.3rem;
+}
+
+.info-card,
+.about-section,
+.resume-section,
+.projects-section {
+  background-color: #c9e1ff;
+}
+
+.resume-card,
+.project-card {
+  background-color: var(--primary-color);
 }
 
 .flex {
@@ -267,7 +279,6 @@ img {
 }
 
 .scrimba-link-container {
-  background-color: var(--primary-color);
   width: 100%;
   padding: 0.4rem 0;
   justify-content: center;
@@ -293,3 +304,9 @@ img {
 .resume-istitute-info {
   color: #052d55;
 }
+
+.resume-img {
+  border-radius: 4px;
+}
+
+/* Projects section */

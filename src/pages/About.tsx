@@ -21,7 +21,11 @@ export default function About() {
         </div>
 
         <div className="scrimba-link-container flex">
-          <Link to="https://scrimba.com/home" className="scrimba-link">
+          <Link
+            to="https://scrimba.com/home"
+            className="scrimba-link"
+            target="_blank"
+          >
             Click here if you want discover about Scrimba
           </Link>
         </div>

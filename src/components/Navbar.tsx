@@ -9,6 +9,7 @@ type MenuProps = {
 export default function Navbar({ menu, setMenu }: MenuProps) {
   const activeStyles = {
     fontSize: "2rem",
+    fontWeight: "bold",
     textDecoration: "underline",
     textShadow: "1px 2px 15px var(--primary-color)",
   };

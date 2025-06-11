@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function About() {
   return (
-    <section className="about-section flex flex-col">
+    <section className="about-section">
       <div className="description-card flex flex-col">
         <div className="description-container">
           <h2 className="about-presentation">

@@ -6,7 +6,7 @@ export interface Resumes {
     description: string,
     eqfLevel?: number,
     imageUrl?: string,
-    alternativeText: string
+    alternativeText?: string
 }
 
 const resume: Resumes[] = [
@@ -17,8 +17,6 @@ const resume: Resumes[] = [
         country: "Italy",
         description: "High School Diploma in Computer Science and Telecommunications",
         eqfLevel: 4,
-        imageUrl: "/FrontEndCertificate.png",
-        alternativeText: "High School Diploma Image"
     },
 
     {

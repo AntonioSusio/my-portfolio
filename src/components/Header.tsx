@@ -10,7 +10,7 @@ export default function Header() {
 
   return (
     <header className="header flex">
-      <div className="left-container">
+      <div className="header-left-container">
         <h1 className="heading-name flex">Antonio Susio</h1>
         <h2 className="heading-role">Frontend developer</h2>
       </div>

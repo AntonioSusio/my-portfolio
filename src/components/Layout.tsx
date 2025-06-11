@@ -12,11 +12,16 @@ export default function Layout() {
     setEmail((prevState) => !prevState);
   }
 
+  function copyEmail() {
+    navigator.clipboard.writeText("antoniosusio@gmail.com");
+    alert("Email copied successfully");
+  }
+
   return (
     <div className="app-wrapper flex flex-col">
       <Header />
       <main className="main-section flex flex-col">
-        <div className="card-container flex flex-col">
+        <div className="info-card flex flex-col">
           <img
             className="card-image"
             src="Antonio.jpg"
@@ -29,7 +34,7 @@ export default function Layout() {
 
           <div className="social-container flex">
             <Link to="https://github.com/AntonioSusio" target="_blank">
-              <FaGithub className="social-icon git-icon" />
+              <FaGithub className="social-icon github-icon" />
             </Link>
 
             <Link
@@ -42,7 +47,11 @@ export default function Layout() {
             <SiGmail className="social-icon gmail-icon" onClick={showEmail} />
           </div>
 
-          {email && <p>antoniosusio@gmail.com</p>}
+          {email && (
+            <p className="email-paragraph" onClick={copyEmail}>
+              antoniosusio@gmail.com
+            </p>
+          )}
         </div>
         <Outlet />
       </main>

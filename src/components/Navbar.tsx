@@ -26,12 +26,13 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
       <ul className="links-list flex flex-col">
         <li>
           <NavLink
-            to="about"
+            to="/"
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
           >
             About Me
           </NavLink>
         </li>
+
         <li>
           <NavLink
             to="resume"
@@ -40,6 +41,7 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
             Resume
           </NavLink>
         </li>
+
         <li>
           <NavLink
             to="projects"
@@ -48,6 +50,7 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
             Projects
           </NavLink>
         </li>
+
         <li>
           <NavLink
             to="contact"

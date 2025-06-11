@@ -1,10 +1,17 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import React from "react";
 
 export default function Layout() {
+  const [email, setEmail] = React.useState<boolean>(false);
+
+  function showEmail() {
+    setEmail((prevState) => !prevState);
+  }
+
   return (
     <div className="app-wrapper flex flex-col">
       <Header />
@@ -21,10 +28,21 @@ export default function Layout() {
           </h1>
 
           <div className="social-container flex">
-            <FaGithub className="social-icon" />
-            <FaLinkedinIn className="social-icon" />
-            <SiGmail className="social-icon" />
+            <Link to="https://github.com/AntonioSusio" target="_blank">
+              <FaGithub className="social-icon git-icon" />
+            </Link>
+
+            <Link
+              to="https://www.linkedin.com/in/antonio-susio-9b2089226/"
+              target="_blank"
+            >
+              <FaLinkedinIn className="social-icon linkedin-icon" />
+            </Link>
+
+            <SiGmail className="social-icon gmail-icon" onClick={showEmail} />
           </div>
+
+          {email && <p>antoniosusio@gmail.com</p>}
         </div>
         <Outlet />
       </main>

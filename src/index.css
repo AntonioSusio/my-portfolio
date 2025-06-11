@@ -43,6 +43,15 @@ body {
   font-size: 2.5rem;
 }
 
+.about-description {
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.scrimba-link {
+  font-size: 1.2rem;
+}
+
 /* Layout */
 h1,
 h2,
@@ -64,6 +73,15 @@ footer {
   height: 3px;
 }
 
+.about-name span,
+.about-presentation span {
+  display: block;
+}
+
+.main-section {
+  padding: 1rem;
+}
+
 button {
   border: none;
   background: transparent;
@@ -71,6 +89,13 @@ button {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+  color: #000000;
+  transition: .3s ease-in-out;
+}
+
+a:hover {
+  transform: scale(0.9);
 }
 
 .flex {
@@ -89,7 +114,6 @@ a {
 .main-section {
   border: 1px solid blue;
   flex: 1;
-  padding: 1rem;
   background-color: var(--secondary-color);
   gap: 1rem;
 }
@@ -150,78 +174,90 @@ a {
   transition: .2s ease-in-out;
 }
 
-/* About Section */
-.about-section {
-  border: 1px solid red;
-  gap: 1rem;
-}
-
 .card-container {
-  padding: 1.5rem 0;
-  align-items: center;
   background-color: #c9e1ff;
-  box-shadow: 1px 1px 10px #525252;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px 2px #444444;
 }
 
 .card-image {
-  width: 250px;
-  border-radius: 50%;
+  border-radius: 100%;
   border: 8px solid var(--primary-color);
+  width: 250px;
 }
 
 .about-name {
-  text-align: center;
-  border-bottom: 3px solid #187cff;
-  padding-bottom: 0.4rem;
+  border-bottom: 3px solid #105cff;
+  padding-bottom: 0.5rem;
 }
 
 .about-name span {
-  display: block;
+  text-align: center;
 }
 
 .social-container {
-  width: 100%;
   background-color: var(--primary-color);
-  padding: 1rem 0;
+  width: 100%;
   justify-content: center;
+  align-items: center;
+  padding: 0.3rem 0;
   gap: 2rem;
 }
 
 .social-icon {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
-.about-description-container {
+.git-icon:hover {
+  color: #bbb;
+}
+.linkedin-icon:hover {
+  color: #0a66c2;
+}
+
+.gmail-icon:hover {
+  color: #c71610;
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: .3s ease-in-out;
+}
+
+/* About Section */
+.about-section {
   background-color: #c9e1ff;
-  padding: 1rem;
-  gap: 1rem;
 }
 
-.about-presentation span{
-  display: block;
+.description-card {
+  gap: 1.5rem;
+  padding: 1rem 0;
 }
 
-.about-description {
-  line-height: 1.5;
-  font-weight: 500;
+.description-container {
+  padding: 0 1.5rem;
+}
+
+.scrimba-link-container {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 0.5rem 0;
+  justify-content: center;
 }
 
 .scrimba-link {
+  width: fit-content;
+  font-weight: bold;
   text-align: center;
   text-decoration: underline;
-  font-weight: bold;
-  color: #000000;
-  cursor: pointer;
-  width: fit-content;
+}
+
+.scrimba-link:hover {
+  color: #105cff;
+  transform: scale(0.95);
 }
 
 .footer {
   justify-content: center;
-}
-
-@media (min-width: 768px) {
-  .main-section {
-    flex-direction: row;
-  }
 }

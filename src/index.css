@@ -30,13 +30,21 @@ body {
 
 .email-paragraph,
 .footer-text,
-.scrimba-link {
+.scrimba-link,
+.technologies-paragraph,
+.technology,
+.project-link {
   font-weight: bold;
 }
 
 .about-description,
 .resume-description {
   font-weight: 500;
+}
+
+.resume-heading,
+.projects-heading {
+  font-size: 2.3rem;
 }
 
 /* Header */
@@ -48,7 +56,8 @@ body {
   font-size: 1.5rem;
 }
 
-.email-paragraph {
+.email-paragraph,
+.project-link {
   font-size: 1.2rem;
 }
 
@@ -66,10 +75,7 @@ body {
   text-align: center;
 }
 
-/* Resume section */
-.resume-heading {
-  font-size: 2.3rem;
-}
+
 
 /* LAYOUT */
 h1, 
@@ -115,8 +121,16 @@ p {
   background-color: #c9e1ff;
 }
 
+.resume-section,
+.projects-section,
+.projects-container {
+  gap: 1rem;
+}
+
+
 .resume-card,
-.project-card {
+.project-card,
+.scrimba-link-container {
   background-color: var(--primary-color);
 }
 
@@ -285,9 +299,6 @@ img {
 }
 
 /* Resume section */
-.resume-section {
-  gap: 1rem;
-}
 
 .resumes-container {
   gap: 2rem;
@@ -301,7 +312,7 @@ img {
 }
 
 .resume-period,
-.resume-istitute-info {
+.resume-institute-info {
   color: #052d55;
 }
 
@@ -310,3 +321,34 @@ img {
 }
 
 /* Projects section */
+.project-info {
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.technologies-paragraph {
+  width: fit-content;
+  border-bottom: 2px solid #000000;
+  align-self: center;
+}
+
+.technologies-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.technology {
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 12px;
+  padding: 0.2rem 0.7rem;
+}
+
+.project-link {
+  color: #052d55;
+  align-self: center;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 1rem;
+}

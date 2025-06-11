@@ -14,7 +14,7 @@ export default function Resume() {
   const resumeEl = resumes.map((resume) => (
     <div key={nanoid()} className="resume-card flex flex-col">
       <h2 className="resume-period">{resume.period}</h2>
-      <h3 className="resume-istitute-info">
+      <h3 className="resume-institute-info">
         {resume.schoolName} - {resume.city} {resume.country}
       </h3>
       {resume.eqfLevel && <p>EQF Level - {resume.eqfLevel}</p>}

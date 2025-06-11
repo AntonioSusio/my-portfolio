@@ -22,12 +22,13 @@ body {
 }
 
 /* Typography */
-.heading-role {
-  font-weight: 300;
+.about-presentation,
+.resume-heading {
+  font-size: 2.5rem;
 }
 
-.footer-text {
-  font-weight: 600;
+.heading-role {
+  font-weight: 300;
 }
 
 .close-menu-button {
@@ -39,10 +40,6 @@ body {
   color: var(--primary-color);
 }
 
-.about-presentation {
-  font-size: 2.5rem;
-}
-
 .about-description {
   font-weight: 500;
   line-height: 1.7;
@@ -50,6 +47,10 @@ body {
 
 .scrimba-link {
   font-size: 1.2rem;
+}
+
+.footer-text {
+  font-weight: 600;
 }
 
 /* Layout */
@@ -60,9 +61,17 @@ p {
   margin: 0;
 }
 
+.main-section,
+.resume-section,
 header,
 footer {
   padding: 1rem;
+}
+
+.about-section,
+.card-container,
+.resume-section {
+  background-color: #c9e1ff;
 }
 
 .hamburger-menu-string-1,
@@ -78,8 +87,13 @@ footer {
   display: block;
 }
 
-.main-section {
-  padding: 1rem;
+.heading-name::before,
+.resume-heading::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondary-color);
 }
 
 button {
@@ -129,14 +143,6 @@ a:hover {
   gap: 0.3125rem;
 }
 
-.heading-name::before {
-  content: '';
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: var(--secondary-color);
-}
-
 .open-menu-button {
   gap: 0.3rem;
 }
@@ -175,7 +181,6 @@ a:hover {
 }
 
 .card-container {
-  background-color: #c9e1ff;
   align-items: center;
   gap: 1.5rem;
   padding: 1.5rem 0;
@@ -226,10 +231,6 @@ a:hover {
 }
 
 /* About Section */
-.about-section {
-  background-color: #c9e1ff;
-}
-
 .description-card {
   gap: 1.5rem;
   padding: 1rem 0;
@@ -255,6 +256,36 @@ a:hover {
 
 .scrimba-link:hover {
   color: #105cff;
+  transform: scale(0.95);
+}
+
+/* Resume Section */
+.resume-section {
+  gap: 1rem;
+}
+
+.resume-heading {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.resumes-container {
+  gap: 2rem;
+}
+
+.resume-card {
+  background-color: var(--primary-color);
+  gap: 0.5rem;
+  padding: 0.6rem;
+  max-width: 600px;
+}
+
+.resume-img {
+  width: 100%;
+  transition: .3s ease-in-out;
+}
+
+.resume-img:hover {
   transform: scale(0.95);
 }
 

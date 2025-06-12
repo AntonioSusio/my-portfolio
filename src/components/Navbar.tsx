@@ -11,7 +11,7 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
     fontSize: "2rem",
     fontWeight: "bold",
     textDecoration: "underline",
-    textShadow: "1px 2px 15px var(--primary-color)",
+    textShadow: "1px 1px 11px var(--primary-color)",
   };
 
   function closeMenu() {
@@ -54,10 +54,10 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
 
         <li>
           <NavLink
-            to="contact"
+            to="certificates"
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
           >
-            Contact
+            Certificates
           </NavLink>
         </li>
       </ul>

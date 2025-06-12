@@ -19,17 +19,19 @@ export default function Projects() {
         className="project-img"
       />
       <div className="project-info flex flex-col">
-        <h2>{project.projectName}</h2>
-        <p>{project.projectDescritpion}</p>
+        <h2 className="project-name">{project.projectName}</h2>
+        <p className="project-description">{project.projectDescritpion}</p>
 
         <p className="technologies-paragraph">Techologies</p>
         <div className="technologies-container flex">
           {project.projectTechnologies.map((tech) => (
-            <p className="technology">{tech}</p>
+            <p key={tech} className="technology">
+              {tech}
+            </p>
           ))}
         </div>
 
-        <Link to="" target="_blank" className="project-link">
+        <Link to={project.projectUrl} target="_blank" className="project-link">
           Click here to visit project site
         </Link>
       </div>

@@ -13,7 +13,11 @@ export default function Projects() {
 
   const projectEl = projects.map((project) => (
     <div key={nanoid()} className="project-card flex flex-col">
-      <img src={project.projectImage} alt={project.alternativeText} />
+      <img
+        src={project.projectImage}
+        alt={project.alternativeText}
+        className="project-img"
+      />
       <div className="project-info flex flex-col">
         <h2>{project.projectName}</h2>
         <p>{project.projectDescritpion}</p>

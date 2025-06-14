@@ -34,7 +34,8 @@ body {
 .scrimba-link,
 .technologies-paragraph,
 .technology,
-.project-link {
+.project-link,
+.anchor-page-links {
   font-weight: bold;
 }
 
@@ -324,6 +325,21 @@ img {
 }
 
 /* Projects section */
+.anchor-page-links-container {
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.anchor-page-links {
+  border: 1px solid #000000;
+  border-radius: 8px;
+  width: fit-content;
+  padding: 0 0.3rem;
+  cursor: pointer;
+}
+
 .project-card {
   box-shadow: 1px 1px 8px #000;
 }

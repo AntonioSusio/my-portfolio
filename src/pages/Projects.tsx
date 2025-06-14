@@ -11,8 +11,18 @@ export default function Projects() {
     setProjects(projectsData);
   }, []);
 
+  const anchorEl = projects.map((project) => (
+    <a href={`#${project.id}`} className="anchor-page-links">
+      {project.projectName}
+    </a>
+  ));
+
   const projectEl = projects.map((project) => (
-    <div key={nanoid()} className="project-card flex flex-col">
+    <div
+      id={`${project.id}`}
+      key={nanoid()}
+      className="project-card flex flex-col"
+    >
       <img
         src={project.projectImage}
         alt={project.alternativeText}
@@ -41,6 +51,8 @@ export default function Projects() {
   return (
     <section className="projects-section flex flex-col">
       <h1 className="projects-heading flex">Projects</h1>
+
+      <div className="anchor-page-links-container flex">{anchorEl}</div>
 
       <div className="projects-container flex flex-col">{projectEl}</div>
     </section>

@@ -1,4 +1,5 @@
 export interface Project {
+    id: number,
     projectName: string,
     projectDescritpion: string,
     projectTechnologies: string[],
@@ -9,6 +10,7 @@ export interface Project {
 
 const projectsData: Project[] = [
     {
+        id: 1,
         projectName: "Vanlife",
         projectDescritpion: "A project based on the buying and selling of camper vans. React Routing method was used to navigate between pages and Authentication Required to access sections reserved only for logged-in users.",
         projectTechnologies: ["React", "Javascript", "Typescript"],
@@ -18,6 +20,7 @@ const projectsData: Project[] = [
     },
 
     {
+        id: 2,
         projectName: "Quizzical",
         projectDescritpion: "A simple quiz app project where you have to answer five general knowledge questions.",
         projectTechnologies: ["React", "Javascript"],
@@ -27,6 +30,7 @@ const projectsData: Project[] = [
     },
 
     {
+        id: 3,
         projectName: "Movie Watchlist",
         projectDescritpion: "A Watchlist application project where you can create your own list of movies or TV shows to watch.",
         projectTechnologies: ["Javascript"],
@@ -36,6 +40,7 @@ const projectsData: Project[] = [
     },
 
     {
+        id: 4,
         projectName: "Assembly Endgame",
         projectDescritpion: "This project is very similar to the game of Hangman. You have 8 lives. Each life is represented by a different programming technology. Try not to lose your favorite!",
         projectTechnologies: ["React", "Javascript"],
@@ -45,6 +50,7 @@ const projectsData: Project[] = [
     },
 
     {
+        id: 5,
         projectName: "Tenzies Game",
         projectDescritpion: "A project that represents a game where you have to win by finding the same number on all the dices. Will you be lucky quickly?",
         projectTechnologies: ["React", "Javascript"],
@@ -54,6 +60,7 @@ const projectsData: Project[] = [
     },
 
     {
+        id: 6,
         projectName: "Meme Generator",
         projectDescritpion: "A simple project that generates random memes and allows you to write what you'd like to be shown on the image. Let your creativity flow! 😆",
         projectTechnologies: ["React", "Javascript"],
@@ -63,6 +70,7 @@ const projectsData: Project[] = [
     },
 
     {
+        id: 7,
         projectName: "Travel Journal",
         projectDescritpion: "A simple static project built with React depicting my travel journal with all the destinations I would like to visit.",
         projectTechnologies: ["React", "Javascript"],

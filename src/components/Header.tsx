@@ -15,13 +15,13 @@ export default function Header() {
         <h2 className="heading-role">Frontend developer</h2>
       </div>
 
+      <Navbar menu={menu} setMenu={setMenu} />
+
       <button onClick={openMenu} className="open-menu-button flex flex-col">
         <span className="hamburger-menu-string-1"></span>
         <span className="hamburger-menu-string-2"></span>
         <span className="hamburger-menu-string-3"></span>
       </button>
-
-      <Navbar menu={menu} setMenu={setMenu} />
     </header>
   );
 }

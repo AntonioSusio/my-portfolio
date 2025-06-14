@@ -1,23 +1,15 @@
 import { Link } from "react-router-dom";
+import data from "../aboutMeData";
 
 export default function About() {
   return (
     <section className="about-section">
       <div className="description-card flex flex-col">
-        <div className="description-container">
+        <div className="description-container flex flex-col">
           <h2 className="about-presentation">
-            <span>Hello,</span> <span>I'm Antonio</span>
+            <span>Hello,</span> <span>I'm {data.name}</span>
           </h2>
-          <p className="about-description">
-            I am a graduate frontend student from the Scrimba platform, with a
-            particular interest in constantly improving and discovering new
-            things about coding. I enjoy difficult challenges, even if it takes
-            me time to solve them, because I like finding and analyzing new
-            approaches that are unknown to me for solve them. I like collectible
-            card games, strategy games, rope jumping, and I am a fan of
-            cannelloni (a typical Neapolitan dish). But most importantly, I
-            really love listening to music.
-          </p>
+          <p className="about-description">{data.description}</p>
         </div>
 
         <div className="scrimba-link-container flex">
@@ -28,6 +20,15 @@ export default function About() {
           >
             Click here if you want discover about Scrimba
           </Link>
+        </div>
+
+        <div className="skills-section flex flex-col">
+          <h2>Skills</h2>
+          <div className="skills-container flex">
+            {data.skills.map((skill) => (
+              <p className="skill">{skill}</p>
+            ))}
+          </div>
         </div>
       </div>
     </section>

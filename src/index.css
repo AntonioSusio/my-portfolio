@@ -191,6 +191,7 @@ img {
   left: 0;
   transform:translateX(100%);
   transition: .3s ease-in-out;
+  z-index: 2;
 }
 
 .menu-open {
@@ -287,10 +288,11 @@ img {
 .description-card {
   padding: 1rem 0;
   gap: 1rem;
+  align-items: center;
 }
 
 .description-container {
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 .about-presentation span {
@@ -298,9 +300,27 @@ img {
 }
 
 .scrimba-link-container {
-  width: 100%;
-  padding: 0.4rem 0;
+  padding: 0.4rem 0.5rem;
   justify-content: center;
+  width: 100%;
+}
+
+.skills-section {
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skills-container {
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill {
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 0.1rem 0.5rem;
 }
 
 /* Resume section */
@@ -410,10 +430,10 @@ img {
   position: absolute;
   top: 0;
   bottom: 0;
-  padding: 1rem;
+  padding: 0.5rem;
+  z-index: 1;
   cursor: pointer;
   transition: .3s ease-in-out;
-  z-index: 1;
 }
 
 .carousel-button:hover {
@@ -426,4 +446,72 @@ img {
 
 .carousel-right-button{
   right: 0;
+}
+
+/* 778px or above */
+@media(min-width: 48.625rem) {
+  .about-section,
+  .resume-section,
+  .projects-section,
+  .certificates-section {
+    width: 60%;
+    height: 600px;
+  }
+
+  .resume-section,
+  .projects-section {
+    overflow-y: scroll;
+  }
+
+  .main-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-card {
+    width: 40%;
+    height: 600px;
+    justify-content: space-evenly;
+  }
+
+  /* About section */
+  .description-card {
+    height: 100%;
+    justify-content: space-evenly;
+  }
+
+  /* Certificates section */
+  .carousel-container {
+    margin: auto;
+    max-width: 800px;
+  }
+}
+
+/* 992px or above */
+@media(min-width: 62rem) {
+  /* Header */
+  .open-menu-button,
+  .close-menu-button {
+    display: none;
+  }
+
+  .header-navbar {
+    all: unset;
+  }
+
+  .links-list {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .links-list li > a {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+  }
+
+  /* Certificates section */
+  .carousel-container{
+    max-width: 900px;
+  }
 }

@@ -8,7 +8,7 @@ type MenuProps = {
 
 export default function Navbar({ menu, setMenu }: MenuProps) {
   const activeStyles = {
-    fontSize: "2rem",
+    fontSize: "1.5rem",
     fontWeight: "bold",
     textDecoration: "underline",
     textShadow: "1px 1px 11px var(--primary-color)",
@@ -29,6 +29,7 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
           <NavLink
             to="/"
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
+            onClick={closeMenu}
           >
             About Me
           </NavLink>
@@ -38,6 +39,7 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
           <NavLink
             to="resume"
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
+            onClick={closeMenu}
           >
             Resume
           </NavLink>
@@ -47,6 +49,7 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
           <NavLink
             to="projects"
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
+            onClick={closeMenu}
           >
             Projects
           </NavLink>
@@ -56,6 +59,7 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
           <NavLink
             to="certificates"
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
+            onClick={closeMenu}
           >
             Certificates
           </NavLink>

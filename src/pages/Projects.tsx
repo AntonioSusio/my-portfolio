@@ -50,7 +50,9 @@ export default function Projects() {
 
   return (
     <section className="projects-section flex flex-col">
-      <h1 className="projects-heading flex">Projects</h1>
+      <h1 id="projects-heading" className="projects-heading flex">
+        Projects
+      </h1>
 
       <div className="anchor-page-links-container flex">{anchorEl}</div>
 

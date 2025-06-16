@@ -35,7 +35,8 @@ body {
 .technologies-paragraph,
 .technology,
 .project-link,
-.anchor-page-links {
+.anchor-page-links,
+.cv-paragraph {
   font-weight: bold;
 }
 
@@ -61,7 +62,8 @@ body {
 }
 
 .email-paragraph,
-.project-link {
+.project-link,
+.cv-paragraph {
   font-size: 1.2rem;
 }
 
@@ -95,7 +97,7 @@ p {
 .resume-section,
 .projects-section,
 .certificates-section {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .hamburger-menu-string-1,
@@ -137,6 +139,18 @@ p {
 .project-card,
 .scrimba-link-container {
   background-color: var(--primary-color);
+}
+
+.email-paragraph,
+.cv-paragraph {
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.email-paragraph:hover,
+.cv-paragraph:hover {
+  transform: scale(0.95);
+  color: #0a66c2;
 }
 
 .flex {
@@ -270,14 +284,8 @@ img {
   transform: scale(0.9);
 }
 
-.email-paragraph {
-  cursor: pointer;
-  transition: .3s ease-in-out;
-}
-
-.email-paragraph:hover {
-  transform: scale(0.95);
-  color: #0a66c2;
+.cv-icon:hover {
+  color: #09bb36;
 }
 
 .footer {
@@ -490,6 +498,11 @@ img {
 
 /* 992px or above */
 @media(min-width: 62rem) {
+  .card-image {
+    width: 300px;
+  }
+
+
   /* Header */
   .open-menu-button,
   .close-menu-button {
@@ -510,8 +523,46 @@ img {
     color: var(--secondary-color);
   }
 
+  .links-list li > a:hover {
+    text-shadow: 1px 1px 2px var(--secondary-color);
+  }
+
   /* Certificates section */
   .carousel-container{
     max-width: 900px;
+  }
+}
+
+/* 1200px or above */ 
+@media(min-width: 75rem) {
+  .info-card,
+  .about-section,
+  .resume-section,
+  .projects-section,
+  .certificates-section {
+    height: 700px;
+  }
+
+  .info-card {
+    gap: unset;
+  }
+
+  .card-image {
+    width: 350px;
+  }
+
+  /* About section */
+  .description-card {
+    gap: unset;
+    justify-content: space-evenly;
+  }
+
+  /* Projects section */
+  .projects-container {
+    align-items: center;
+  }
+
+  .project-card {
+    max-width: 850px;
   }
 }

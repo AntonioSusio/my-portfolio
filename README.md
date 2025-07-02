@@ -1,54 +1,51 @@
-# React + TypeScript + Vite
+# Antonio Susio - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website, built using **React** and **TypeScript**. This application showcases my background, skills, projects, and certifications in a clean and interactive format.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Preview
 
-## Expanding the ESLint configuration
+[🔗 View Online Portfolio](https://your-portfolio-url.com)  
+_(Replace with actual URL if deployed)_
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📁 Project Structure
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The app is structured as a Single Page Application (SPA) using **React Router**, and includes the following main sections:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 📄 About
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+An introduction to who I am, along with a brief personal description and a list of my technical skills.
+
+### 📜 Resume
+
+An overview of my education and professional background.
+
+### 💻 Projects
+
+A gallery of projects I have worked on during my formation at Scrimba's Frontend course, each with:
+
+- Screenshot or cover image
+- Description
+- Technologies used
+- Link to the live site or repository
+
+### 📑 Certificates
+
+A horizontal scrollable carousel displaying certifications I’ve earned.
+
+---
+
+## ⚙️ Technologies Used
+
+- **React** + **TypeScript**
+- **React Router** (routing)
+- **React Icons**
+- **NanoID** (unique keys)
+- **CSS / Flexbox** (custom responsive styling)
+- **Modular component structure**
+- **Data-driven rendering** via external `.ts` files
+
+---

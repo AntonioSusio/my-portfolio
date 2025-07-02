@@ -16,7 +16,7 @@ const projectsData: Project[] = [
         projectTechnologies: ["React", "Javascript", "Typescript"],
         projectImage: "/VanLifeProject.png",
         alternativeText: "Image representing Vanlife site homepage",
-        projectUrl: "https://van-life-antonio.netlify.app"
+        projectUrl: "https://vanlife-antonio.netlify.app"
     },
 
     {

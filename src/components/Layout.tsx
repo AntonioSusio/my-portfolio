@@ -67,7 +67,7 @@ export default function Layout() {
               className="cv-paragraph"
               download
             >
-              Click here for download my CV
+              Click here to download my resume
             </a>
           )}
         </div>

@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
+import type { JSX } from "react";
 import data from "../aboutMeData";
 
-export default function About() {
+export default function About(): JSX.Element {
   return (
     <section className="about-section">
       <div className="description-card flex flex-col">

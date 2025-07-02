@@ -1,52 +1,61 @@
 import React from "react";
 import type { Project } from "../projects";
+import type { JSX } from "react";
 import projectsData from "../projects";
 import { nanoid } from "nanoid";
 import { Link } from "react-router-dom";
 
-export default function Projects() {
+export default function Projects(): JSX.Element {
   const [projects, setProjects] = React.useState<Project[]>([]);
 
-  React.useEffect(() => {
+  React.useEffect((): void => {
     setProjects(projectsData);
   }, []);
 
-  const anchorEl = projects.map((project) => (
-    <a href={`#${project.id}`} className="anchor-page-links">
-      {project.projectName}
-    </a>
-  ));
+  const anchorEl: JSX.Element[] = projects.map(
+    (project: Project): JSX.Element => (
+      <a href={`#${project.id}`} className="anchor-page-links">
+        {project.projectName}
+      </a>
+    )
+  );
 
-  const projectEl = projects.map((project) => (
-    <div
-      id={`${project.id}`}
-      key={nanoid()}
-      className="project-card flex flex-col"
-    >
-      <img
-        src={project.projectImage}
-        alt={project.alternativeText}
-        className="project-img"
-      />
-      <div className="project-info flex flex-col">
-        <h2 className="project-name">{project.projectName}</h2>
-        <p className="project-description">{project.projectDescritpion}</p>
+  const projectEl: JSX.Element[] = projects.map(
+    (project: Project): JSX.Element => (
+      <div
+        id={`${project.id}`}
+        key={nanoid()}
+        className="project-card flex flex-col"
+      >
+        <img
+          src={project.projectImage}
+          alt={project.alternativeText}
+          className="project-img"
+        />
+        <div className="project-info flex flex-col">
+          <h2 className="project-name">{project.projectName}</h2>
+          <p className="project-description">{project.projectDescritpion}</p>
 
-        <p className="technologies-paragraph">Techologies</p>
-        <div className="technologies-container flex">
-          {project.projectTechnologies.map((tech) => (
-            <p key={tech} className="technology">
-              {tech}
-            </p>
-          ))}
+          <p className="technologies-paragraph">Techologies</p>
+          <div className="technologies-container flex">
+            {project.projectTechnologies.map((tech) => (
+              <p key={tech} className="technology">
+                {tech}
+              </p>
+            ))}
+          </div>
+
+          <Link
+            to={project.projectUrl}
+            target="_blank"
+            className="project-link"
+          >
+            Click here to visit project site
+          </Link>
         </div>
-
-        <Link to={project.projectUrl} target="_blank" className="project-link">
-          Click here to visit project site
-        </Link>
       </div>
-    </div>
-  ));
+    )
+  );
 
   return (
     <section className="projects-section flex flex-col">

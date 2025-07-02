@@ -1,23 +1,26 @@
 import React from "react";
 import Carousel from "../components/Carousel";
+import type { JSX } from "react";
 import type { Certificate } from "../certificatesData";
 import certificatesData from "../certificatesData";
 
-export default function Certificates() {
+export default function Certificates(): JSX.Element {
   const [certificates, setCertificates] = React.useState<Certificate[]>([]);
   const [slideIndex, setSlideIndex] = React.useState<number>(0);
 
-  const certificatesEl = certificates.map((certificate) => (
-    <img
-      key={certificate.id}
-      src={certificate.certificateImg}
-      className="certificate-img"
-      alt={certificate.alternativeText}
-      style={{ translate: `${-100 * slideIndex}%` }}
-    />
-  ));
+  const certificatesEl: JSX.Element[] = certificates.map(
+    (certificate: Certificate): JSX.Element => (
+      <img
+        key={certificate.id}
+        src={certificate.certificateImg}
+        className="certificate-img"
+        alt={certificate.alternativeText}
+        style={{ translate: `${-100 * slideIndex}%` }}
+      />
+    )
+  );
 
-  React.useEffect(() => {
+  React.useEffect((): void => {
     if (
       certificates.length === 0 ||
       certificatesData.length !== certificates.length

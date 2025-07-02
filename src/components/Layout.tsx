@@ -1,4 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
+import type { JSX } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -6,19 +7,19 @@ import { SiGmail } from "react-icons/si";
 import { IoDocumentText } from "react-icons/io5";
 import React from "react";
 
-export default function Layout() {
+export default function Layout(): JSX.Element {
   const [email, setEmail] = React.useState<boolean>(false);
   const [cv, setCv] = React.useState<boolean>(false);
 
-  function showEmail() {
-    setEmail((prevState) => !prevState);
+  function showEmail(): void {
+    setEmail((prevState: boolean): boolean => !prevState);
   }
 
-  function showCv() {
-    setCv((prevState) => !prevState);
+  function showCv(): void {
+    setCv((prevState: boolean): boolean => !prevState);
   }
 
-  function copyEmail() {
+  function copyEmail(): void {
     navigator.clipboard.writeText("antoniosusio@gmail.com");
     alert("Email copied successfully");
   }

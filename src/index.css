@@ -92,7 +92,6 @@ p {
 
 .header,
 .footer,
-.main-section,
 .header-navbar,
 .resume-section,
 .projects-section,
@@ -187,6 +186,9 @@ img {
 
 /* Header */
 .header {
+  position: fixed;
+  background-color: var(--primary-color);
+  width: 100%;
   justify-content: space-between;
   align-items: center;
 }
@@ -230,6 +232,7 @@ img {
 
 /* Main Section */
 .main-section {
+  padding: 10.5rem 2rem 2rem;
   background-color: var(--secondary-color);
   flex: 1;
   gap: 1.5rem;

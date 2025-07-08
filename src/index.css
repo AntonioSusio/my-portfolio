@@ -24,7 +24,6 @@ body {
 
 /* TYPOGRAPHY */
 .close-menu-button,
-.social-icon,
 .project-name {
   font-size: 2rem;
 }
@@ -56,6 +55,10 @@ body {
   font-weight: 400;
 }
 
+.social-icon {
+  font-size: 1.7rem;
+}
+
 .links-list li > a {
   font-size: 1.5rem;
   letter-spacing: 3px;
@@ -68,6 +71,10 @@ body {
 }
 
 /* About section */
+.about-name {
+  font-size: 2rem;
+}
+
 .about-presentation {
   font-size: 2.5rem;
 }
@@ -91,7 +98,10 @@ p {
 }
 
 .header,
-.footer,
+.footer {
+  padding: 1rem 1.5rem;
+}
+
 .header-navbar,
 .resume-section,
 .projects-section,
@@ -120,7 +130,6 @@ p {
   margin-right: 0.3rem;
 }
 
-.info-card,
 .about-section,
 .resume-section,
 .projects-section,
@@ -191,6 +200,7 @@ img {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 }
 
 .open-menu-button {
@@ -238,12 +248,6 @@ img {
   gap: 1.5rem;
 }
 
-.info-card {
-  padding: 1.5rem 0;
-  gap: 1.5rem;
-  align-items: center;
-}
-
 .card-image {
   width: 250px;
   border: 8px solid var(--primary-color);
@@ -262,9 +266,8 @@ img {
 
 .social-container {
   background-color: var(--primary-color);
-  width: 100%;
+  width: fit-content;
   align-items: center;
-  justify-content: center;
   padding: 0.3rem 0 0 0;
   gap: 1.5rem;
 }
@@ -289,6 +292,7 @@ img {
 
 .cv-icon:hover {
   color: #09bb36;
+  transform: scale(0.9);
 }
 
 .footer {
@@ -298,7 +302,7 @@ img {
 /* About Section */
 .description-card {
   padding: 1rem 0;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -461,11 +465,14 @@ img {
 
 /* 778px or above */
 @media(min-width: 48.625rem) {
-  .about-section,
+  .certificates-section,
   .resume-section,
-  .projects-section,
-  .certificates-section {
-    width: 60%;
+  .projects-section {
+    width: 70%;
+  }
+
+  .resume-section,
+  .projects-section {
     height: 600px;
   }
 
@@ -480,13 +487,11 @@ img {
     justify-content: center;
   }
 
-  .info-card {
-    width: 40%;
-    height: 600px;
-    justify-content: space-evenly;
-  }
-
   /* About section */
+  .about-section {
+    width: 60%;
+  }
+  
   .description-card {
     height: 100%;
     justify-content: space-evenly;
@@ -504,7 +509,6 @@ img {
   .card-image {
     width: 300px;
   }
-
 
   /* Header */
   .open-menu-button,
@@ -530,6 +534,15 @@ img {
     text-shadow: 1px 1px 2px var(--secondary-color);
   }
 
+  /* About section */
+  .about-name {
+    font-size: 3rem;
+  }
+
+  .about-name span {
+    display: unset;
+  }
+
   /* Certificates section */
   .carousel-container{
     max-width: 900px;
@@ -538,16 +551,10 @@ img {
 
 /* 1200px or above */ 
 @media(min-width: 75rem) {
-  .info-card,
-  .about-section,
   .resume-section,
   .projects-section,
   .certificates-section {
     height: 700px;
-  }
-
-  .info-card {
-    gap: unset;
   }
 
   .card-image {
@@ -556,7 +563,6 @@ img {
 
   /* About section */
   .description-card {
-    gap: unset;
     justify-content: space-evenly;
   }
 

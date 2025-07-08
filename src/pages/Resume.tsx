@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import type { JSX } from "react";
 import type { Resumes } from "../resume";
 import resume from "../resume";
@@ -21,13 +20,13 @@ export default function Resume(): JSX.Element {
         </h3>
         {resume.eqfLevel && <p>EQF Level - {resume.eqfLevel}</p>}
         <p className="resume-description">{resume.description}</p>
-        <Link to={`${resume.imageUrl}`} target="_blank">
+        <a href={`${resume.imageUrl}`} target="_blank">
           <img
             className="resume-img"
             src={resume.imageUrl}
             alt={resume.alternativeText}
           />
-        </Link>
+        </a>
       </div>
     )
   );

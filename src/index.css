@@ -56,7 +56,7 @@ body {
 }
 
 .social-icon {
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 .links-list li > a {
@@ -199,12 +199,48 @@ img {
   background-color: var(--primary-color);
   width: 100%;
   justify-content: space-between;
-  align-items: center;
   z-index: 10;
+}
+
+.header-inner-container {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .open-menu-button {
   gap: 0.3rem;
+}
+
+.social-container {
+  background-color: var(--primary-color);
+  width: fit-content;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1rem auto 0;
+}
+
+.social-icon {
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.github-icon:hover {
+  color: #bbb;
+}
+
+.linkedin-icon:hover {
+  color: #0a66c2;
+}
+
+.gmail-icon:hover {
+  color: #c71610;
+  transform: scale(0.9);
+}
+
+.cv-icon:hover {
+  color: #09bb36;
+  transform: scale(0.9);
 }
 
 /* Navbar */
@@ -233,7 +269,7 @@ img {
   list-style-type: none;
   padding: 0;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 
 .links-list li > a {
@@ -242,10 +278,21 @@ img {
 
 /* Main Section */
 .main-section {
-  padding: 10.5rem 2rem 2rem;
+  padding: 11.5rem 2rem 2rem;
   background-color: var(--secondary-color);
   flex: 1;
   gap: 1.5rem;
+}
+
+.footer {
+  justify-content: center;
+}
+
+/* About Section */
+.description-card {
+  padding: 1.5rem 0;
+  gap: 2rem;
+  align-items: center;
 }
 
 .card-image {
@@ -262,48 +309,6 @@ img {
 .about-name span {
   display: block;
   text-align: center;
-}
-
-.social-container {
-  background-color: var(--primary-color);
-  width: fit-content;
-  align-items: center;
-  padding: 0.3rem 0 0 0;
-  gap: 1.5rem;
-}
-
-.social-icon {
-  cursor: pointer;
-  transition: .3s ease-in-out;
-}
-
-.github-icon:hover {
-  color: #bbb;
-}
-
-.linkedin-icon:hover {
-  color: #0a66c2;
-}
-
-.gmail-icon:hover {
-  color: #c71610;
-  transform: scale(0.9);
-}
-
-.cv-icon:hover {
-  color: #09bb36;
-  transform: scale(0.9);
-}
-
-.footer {
-  justify-content: center;
-}
-
-/* About Section */
-.description-card {
-  padding: 1rem 0;
-  gap: 2rem;
-  align-items: center;
 }
 
 .description-container {
@@ -423,6 +428,10 @@ img {
 }
 
 /* Certificates Section */
+.certificates-section {
+  margin: auto;
+}
+
 .carousel-container {
   width: 100%;
   overflow: hidden;
@@ -436,6 +445,7 @@ img {
   flex-shrink: 0;
   flex-grow: 0;
   transition: .2s ease-in-out;
+  cursor: pointer;
 }
 
 .carousel-button {
@@ -461,6 +471,26 @@ img {
 
 .carousel-right-button{
   right: 0;
+}
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  cursor: zoom-out;
+}
+
+.lightbox-image {
+  max-width: 70%;
+  max-height: 90%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 /* 778px or above */

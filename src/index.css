@@ -473,6 +473,13 @@ img {
   right: 0;
 }
 
+.slider-buttons-container {
+  position: absolute;
+  bottom: .5rem;
+  left: 50%;
+  translate: -50%;
+}
+
 .lightbox-overlay {
   position: fixed;
   top: 0;

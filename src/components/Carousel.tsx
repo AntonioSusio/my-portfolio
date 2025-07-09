@@ -1,5 +1,6 @@
 import React from "react";
 import { IoMdArrowDropright, IoMdArrowDropleft } from "react-icons/io";
+import { FaRegCircle } from "react-icons/fa";
 
 interface CarouselProps {
   certificates: React.ReactNode[];
@@ -34,6 +35,12 @@ export default function Carousel({
     }
   }
 
+  const sliderButtonEl = certificates.map((_, index) => (
+    <button key={index}>
+      <FaRegCircle />
+    </button>
+  ));
+
   return (
     <div className="carousel-container flex">
       <button
@@ -53,6 +60,8 @@ export default function Carousel({
       >
         <IoMdArrowDropright />
       </button>
+
+      <div className="slider-buttons-container">{sliderButtonEl}</div>
     </div>
   );
 }

@@ -8,13 +8,21 @@ import { Link } from "react-router-dom";
 export default function Projects(): JSX.Element {
   const [projects, setProjects] = React.useState<Project[]>([]);
 
+  const myRef: React.RefObject<null> = React.useRef(null);
+
+  React.useEffect((): void => {
+    const observer: IntersectionObserver = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[]): void => {}
+    );
+  }, []);
+
   React.useEffect((): void => {
     setProjects(projectsData);
   }, []);
 
   const anchorEl: JSX.Element[] = projects.map(
     (project: Project): JSX.Element => (
-      <a href={`#${project.id}`} className="anchor-page-links">
+      <a key={project.id} href={`#${project.id}`} className="anchor-page-links">
         {project.projectName}
       </a>
     )
@@ -59,7 +67,7 @@ export default function Projects(): JSX.Element {
 
   return (
     <section className="projects-section flex flex-col">
-      <h1 id="projects-heading" className="projects-heading flex">
+      <h1 ref={myRef} id="projects-heading" className="projects-heading flex">
         Projects
       </h1>
 

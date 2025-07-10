@@ -1,14 +1,16 @@
 import React from "react";
 import { IoMdArrowDropright, IoMdArrowDropleft } from "react-icons/io";
-import { FaRegCircle } from "react-icons/fa";
+import { FaRegCircle, FaCircle } from "react-icons/fa";
 
 interface CarouselProps {
   certificates: React.ReactNode[];
+  slideIndex: number;
   setSlideIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export default function Carousel({
   certificates,
+  slideIndex,
   setSlideIndex,
 }: CarouselProps) {
   function moveSlide(event: React.MouseEvent<HTMLButtonElement>) {
@@ -36,8 +38,14 @@ export default function Carousel({
   }
 
   const sliderButtonEl = certificates.map((_, index) => (
-    <button key={index}>
-      <FaRegCircle />
+    <button
+      key={index}
+      onClick={() => setSlideIndex(index)}
+      className={
+        index === slideIndex ? "current-slide-circle" : "slider-circle-button"
+      }
+    >
+      {index === slideIndex ? <FaCircle /> : <FaRegCircle />}
     </button>
   ));
 
@@ -61,7 +69,7 @@ export default function Carousel({
         <IoMdArrowDropright />
       </button>
 
-      <div className="slider-buttons-container">{sliderButtonEl}</div>
+      <div className="slider-buttons-container flex">{sliderButtonEl}</div>
     </div>
   );
 }

@@ -36,7 +36,9 @@ export default function About(): JSX.Element {
           <h2>Skills</h2>
           <div className="skills-container flex">
             {data.skills.map((skill) => (
-              <p className="skill">{skill}</p>
+              <p key={skill} className="skill">
+                {skill}
+              </p>
             ))}
           </div>
         </div>

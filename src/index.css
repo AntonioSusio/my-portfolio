@@ -143,6 +143,12 @@ p {
   gap: 1rem;
 }
 
+.resume-section,
+.projects-section {
+  height: 600px;
+  overflow-y: scroll;
+}
+
 .resume-card,
 .project-card,
 .scrimba-link-container {
@@ -159,6 +165,12 @@ p {
 .cv-paragraph:hover {
   transform: scale(0.95);
   color: #0a66c2;
+}
+
+.carousel-button,
+.slider-circle-button,
+.scroll-to-top-button {
+  all: unset;
 }
 
 .flex {
@@ -365,6 +377,10 @@ img {
 }
 
 /* Projects section */
+.projects-section {
+  position: relative;
+}
+
 .anchor-page-links-container {
   flex-wrap: wrap;
   gap: 0.4rem;
@@ -427,6 +443,26 @@ img {
   margin-top: 1rem;
 }
 
+.scroll-to-top-button {
+  background-color: var(--secondary-color);
+  position: fixed;
+  bottom: 5%;
+  right: 15%;
+  padding: 0.9rem 1rem;
+  border-radius: 50%;
+  transition: .3s ease-in-out;
+}
+
+.scroll-to-top-button:hover {
+  transform: scale(0.9);
+  background-color: #094480;
+}
+
+.scroll-to-top-button > * {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
 /* Certificates Section */
 .certificates-section {
   margin: auto;
@@ -449,7 +485,6 @@ img {
 }
 
 .carousel-button {
-  all: unset;
   font-size: 1.5rem;
   display: block;
   position: absolute;
@@ -482,7 +517,6 @@ img {
 }
 
 .slider-circle-button {
-  all: unset;
   cursor: pointer;
   font-size: 0.7rem;
 }
@@ -518,16 +552,6 @@ img {
     width: 70%;
   }
 
-  .resume-section,
-  .projects-section {
-    height: 600px;
-  }
-
-  .resume-section,
-  .projects-section {
-    overflow-y: scroll;
-  }
-
   .main-section {
     flex-direction: row;
     align-items: center;
@@ -542,6 +566,12 @@ img {
   .description-card {
     height: 100%;
     justify-content: space-evenly;
+  }
+
+  /* projects section */
+  .scroll-to-top-button {
+    bottom: 5%;
+    right: 20%;
   }
 
   /* Certificates section */
@@ -620,5 +650,10 @@ img {
 
   .project-card {
     max-width: 850px;
+  }
+
+  /* Projects section */
+  .scroll-to-top-button {
+    bottom: 10%;
   }
 }

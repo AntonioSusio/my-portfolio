@@ -1,24 +1,27 @@
 import React from "react";
-import type { Project } from "../projects";
 import type { JSX } from "react";
+import { Link } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
+import type { Project } from "../projects";
 import projectsData from "../projects";
 import { nanoid } from "nanoid";
-import { Link } from "react-router-dom";
+import { FaArrowUp } from "react-icons/fa";
 
 export default function Projects(): JSX.Element {
   const [projects, setProjects] = React.useState<Project[]>([]);
-
-  const myRef: React.RefObject<null> = React.useRef(null);
-
-  React.useEffect((): void => {
-    const observer: IntersectionObserver = new IntersectionObserver(
-      (entries: IntersectionObserverEntry[]): void => {}
-    );
-  }, []);
+  const { ref: myRef, inView: myElementIsVisible } = useInView();
 
   React.useEffect((): void => {
     setProjects(projectsData);
   }, []);
+
+  function scrollToTop(): void {
+    const scrollContainer: Element | null =
+      document.querySelector(".projects-section");
+    if (scrollContainer) {
+      scrollContainer.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
 
   const anchorEl: JSX.Element[] = projects.map(
     (project: Project): JSX.Element => (
@@ -72,6 +75,11 @@ export default function Projects(): JSX.Element {
       </h1>
 
       <div className="anchor-page-links-container flex">{anchorEl}</div>
+      {!myElementIsVisible && (
+        <button className="scroll-to-top-button" onClick={scrollToTop}>
+          <FaArrowUp />
+        </button>
+      )}
 
       <div className="projects-container flex flex-col">{projectEl}</div>
     </section>

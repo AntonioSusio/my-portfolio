@@ -50,7 +50,13 @@ export default function Certificates(): JSX.Element {
       />
 
       {lightBoxOpen && (
-        <div className="lightbox-overlay" onClick={closeLightBox}>
+        <div
+          className="lightbox-overlay"
+          onClick={closeLightBox}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Certificate viewer"
+        >
           <div onClick={(e) => e.stopPropagation()}>
             <Carousel
               slideIndex={slideIndex}

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import type { JSX } from "react";
 import data from "../aboutMeData";
 
@@ -23,24 +22,24 @@ export default function About(): JSX.Element {
         </div>
 
         <div className="scrimba-link-container flex">
-          <Link
-            to="https://scrimba.com/home"
+          <a
+            href="https://scrimba.com/home"
             className="scrimba-link"
             target="_blank"
           >
             Click here if you want discover about Scrimba
-          </Link>
+          </a>
         </div>
 
         <div className="skills-section flex flex-col">
           <h2>Skills</h2>
-          <div className="skills-container flex">
+          <ul className="skills-container flex">
             {data.skills.map((skill) => (
-              <p key={skill} className="skill">
+              <li key={skill} className="skill">
                 {skill}
-              </p>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

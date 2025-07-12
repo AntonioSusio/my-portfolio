@@ -1,4 +1,5 @@
 export interface Resumes {
+    id: number,
     period: string,
     schoolName: string,
     city?: string,
@@ -11,6 +12,7 @@ export interface Resumes {
 
 const resume: Resumes[] = [
     {
+        id: 1,
         period: "2014 - 2019",
         schoolName: "ITIS Alessandro Volta",
         city: "Naples,",
@@ -20,6 +22,7 @@ const resume: Resumes[] = [
     },
 
     {
+        id: 2,
         period: "2023 - 2024",
         schoolName: "Scrimba",
         city: "Online platform",

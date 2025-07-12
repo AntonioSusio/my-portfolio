@@ -19,8 +19,15 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
   }
 
   return (
-    <nav className={`header-navbar ${menu ? "menu-open" : ""} flex flex-col`}>
-      <button className="close-menu-button" onClick={closeMenu}>
+    <nav
+      className={`header-navbar ${menu ? "menu-open" : ""} flex flex-col`}
+      aria-label="Navigation menu"
+    >
+      <button
+        className="close-menu-button"
+        onClick={closeMenu}
+        aria-label="Close navigation menu"
+      >
         X
       </button>
 
@@ -65,6 +72,10 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
           </NavLink>
         </li>
       </ul>
+
+      <div aria-live="polite" className="sr-only">
+        {menu ? "Menu open" : "Menu closed"}
+      </div>
     </nav>
   );
 }

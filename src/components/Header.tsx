@@ -44,7 +44,9 @@ export default function Header() {
           <SiGmail className="social-icon gmail-icon" />
         </a>
 
-        <IoDocumentText className="social-icon cv-icon" />
+        <a href="/Antonio Susio's CV EN.pdf" download>
+          <IoDocumentText className="social-icon cv-icon" />
+        </a>
       </div>
     </header>
   );

@@ -24,7 +24,6 @@ body {
 
 /* TYPOGRAPHY */
 .close-menu-button,
-.social-icon,
 .project-name {
   font-size: 2rem;
 }
@@ -56,6 +55,10 @@ body {
   font-weight: 400;
 }
 
+.social-icon {
+  font-size: 2rem;
+}
+
 .links-list li > a {
   font-size: 1.5rem;
   letter-spacing: 3px;
@@ -67,7 +70,23 @@ body {
   font-size: 1.2rem;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* About section */
+.about-name {
+  font-size: 2rem;
+}
+
 .about-presentation {
   font-size: 2.5rem;
 }
@@ -91,8 +110,10 @@ p {
 }
 
 .header,
-.footer,
-.main-section,
+.footer {
+  padding: 1rem 1.5rem;
+}
+
 .header-navbar,
 .resume-section,
 .projects-section,
@@ -121,7 +142,6 @@ p {
   margin-right: 0.3rem;
 }
 
-.info-card,
 .about-section,
 .resume-section,
 .projects-section,
@@ -133,6 +153,12 @@ p {
 .projects-section,
 .certificates-section {
   gap: 1rem;
+}
+
+.resume-section,
+.projects-section {
+  height: 600px;
+  overflow-y: scroll;
 }
 
 .resume-card,
@@ -151,6 +177,12 @@ p {
 .cv-paragraph:hover {
   transform: scale(0.95);
   color: #0a66c2;
+}
+
+.carousel-button,
+.slider-circle-button,
+.scroll-to-top-button {
+  all: unset;
 }
 
 .flex {
@@ -181,18 +213,63 @@ img {
   display: block;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
 .app-wrapper {
   min-height: 100vh;
 }
 
 /* Header */
 .header {
+  position: fixed;
+  background-color: var(--primary-color);
+  width: 100%;
   justify-content: space-between;
+  z-index: 10;
+}
+
+.header-inner-container {
+  width: 100%;
   align-items: center;
+  justify-content: space-between;
 }
 
 .open-menu-button {
   gap: 0.3rem;
+}
+
+.social-container {
+  background-color: var(--primary-color);
+  width: fit-content;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1rem auto 0;
+}
+
+.social-icon {
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+
+.github-icon:hover {
+  color: #bbb;
+}
+
+.linkedin-icon:hover {
+  color: #0a66c2;
+}
+
+.gmail-icon:hover {
+  color: #c71610;
+  transform: scale(0.9);
+}
+
+.cv-icon:hover {
+  color: #09bb36;
+  transform: scale(0.9);
 }
 
 /* Navbar */
@@ -218,10 +295,8 @@ img {
 }
 
 .links-list {
-  list-style-type: none;
-  padding: 0;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3rem;
 }
 
 .links-list li > a {
@@ -230,14 +305,20 @@ img {
 
 /* Main Section */
 .main-section {
+  padding: 11.5rem 2rem 2rem;
   background-color: var(--secondary-color);
   flex: 1;
   gap: 1.5rem;
 }
 
-.info-card {
+.footer {
+  justify-content: center;
+}
+
+/* About Section */
+.description-card {
   padding: 1.5rem 0;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -255,48 +336,6 @@ img {
 .about-name span {
   display: block;
   text-align: center;
-}
-
-.social-container {
-  background-color: var(--primary-color);
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  padding: 0.3rem 0 0 0;
-  gap: 1.5rem;
-}
-
-.social-icon {
-  cursor: pointer;
-  transition: .3s ease-in-out;
-}
-
-.github-icon:hover {
-  color: #bbb;
-}
-
-.linkedin-icon:hover {
-  color: #0a66c2;
-}
-
-.gmail-icon:hover {
-  color: #c71610;
-  transform: scale(0.9);
-}
-
-.cv-icon:hover {
-  color: #09bb36;
-}
-
-.footer {
-  justify-content: center;
-}
-
-/* About Section */
-.description-card {
-  padding: 1rem 0;
-  gap: 1rem;
-  align-items: center;
 }
 
 .description-container {
@@ -353,6 +392,10 @@ img {
 }
 
 /* Projects section */
+.projects-section {
+  position: relative;
+}
+
 .anchor-page-links-container {
   flex-wrap: wrap;
   gap: 0.4rem;
@@ -415,7 +458,31 @@ img {
   margin-top: 1rem;
 }
 
+.scroll-to-top-button {
+  background-color: var(--secondary-color);
+  position: fixed;
+  bottom: 5%;
+  right: 15%;
+  padding: 0.9rem 1rem;
+  border-radius: 50%;
+  transition: .3s ease-in-out;
+}
+
+.scroll-to-top-button:hover {
+  transform: scale(0.9);
+  background-color: #094480;
+}
+
+.scroll-to-top-button > * {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
 /* Certificates Section */
+.certificates-section {
+  margin: auto;
+}
+
 .carousel-container {
   width: 100%;
   overflow: hidden;
@@ -429,10 +496,10 @@ img {
   flex-shrink: 0;
   flex-grow: 0;
   transition: .2s ease-in-out;
+  cursor: pointer;
 }
 
 .carousel-button {
-  all: unset;
   font-size: 1.5rem;
   display: block;
   position: absolute;
@@ -456,19 +523,48 @@ img {
   right: 0;
 }
 
+.slider-buttons-container {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  translate: -50%;
+  gap: 0.5rem;
+}
+
+.slider-circle-button {
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+
+.slider-circle-button > * {
+  display: block;
+}
+
+.current-slide-circle {
+  scale: 1.3;
+  transition: .3s ease-in-out;
+}
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  cursor: zoom-out;
+}
+
 /* 778px or above */
 @media(min-width: 48.625rem) {
-  .about-section,
-  .resume-section,
-  .projects-section,
-  .certificates-section {
-    width: 60%;
-    height: 600px;
-  }
-
+  .certificates-section,
   .resume-section,
   .projects-section {
-    overflow-y: scroll;
+    width: 70%;
   }
 
   .main-section {
@@ -477,16 +573,20 @@ img {
     justify-content: center;
   }
 
-  .info-card {
-    width: 40%;
-    height: 600px;
-    justify-content: space-evenly;
-  }
-
   /* About section */
+  .about-section {
+    width: 60%;
+  }
+  
   .description-card {
     height: 100%;
     justify-content: space-evenly;
+  }
+
+  /* projects section */
+  .scroll-to-top-button {
+    bottom: 5%;
+    right: 20%;
   }
 
   /* Certificates section */
@@ -501,7 +601,6 @@ img {
   .card-image {
     width: 300px;
   }
-
 
   /* Header */
   .open-menu-button,
@@ -527,6 +626,15 @@ img {
     text-shadow: 1px 1px 2px var(--secondary-color);
   }
 
+  /* About section */
+  .about-name {
+    font-size: 3rem;
+  }
+
+  .about-name span {
+    display: unset;
+  }
+
   /* Certificates section */
   .carousel-container{
     max-width: 900px;
@@ -535,16 +643,10 @@ img {
 
 /* 1200px or above */ 
 @media(min-width: 75rem) {
-  .info-card,
-  .about-section,
   .resume-section,
   .projects-section,
   .certificates-section {
     height: 700px;
-  }
-
-  .info-card {
-    gap: unset;
   }
 
   .card-image {
@@ -553,7 +655,6 @@ img {
 
   /* About section */
   .description-card {
-    gap: unset;
     justify-content: space-evenly;
   }
 
@@ -564,5 +665,10 @@ img {
 
   .project-card {
     max-width: 850px;
+  }
+
+  /* Projects section */
+  .scroll-to-top-button {
+    bottom: 10%;
   }
 }

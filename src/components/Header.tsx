@@ -1,5 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import { IoDocumentText } from "react-icons/io5";
 
 export default function Header() {
   const [menu, setMenu] = React.useState<boolean>(false);
@@ -9,19 +12,58 @@ export default function Header() {
   }
 
   return (
-    <header className="header flex">
-      <div className="header-left-container">
-        <h1 className="heading-name flex">Antonio Susio</h1>
-        <h2 className="heading-role">Frontend developer</h2>
+    <header className="header flex flex-col">
+      <div className="header-inner-container flex">
+        <div className="header-left-container">
+          <h1 className="heading-name flex">Antonio Susio</h1>
+          <h2 className="heading-role">Frontend developer</h2>
+        </div>
+
+        <button
+          onClick={openMenu}
+          className="open-menu-button flex flex-col"
+          aria-label="Open navigation menu"
+        >
+          <span className="hamburger-menu-string-1"></span>
+          <span className="hamburger-menu-string-2"></span>
+          <span className="hamburger-menu-string-3"></span>
+        </button>
+
+        <Navbar menu={menu} setMenu={setMenu} />
       </div>
 
-      <Navbar menu={menu} setMenu={setMenu} />
+      <div className="social-container flex">
+        <a
+          href="https://github.com/AntonioSusio"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <FaGithub className="social-icon github-icon" />
+        </a>
 
-      <button onClick={openMenu} className="open-menu-button flex flex-col">
-        <span className="hamburger-menu-string-1"></span>
-        <span className="hamburger-menu-string-2"></span>
-        <span className="hamburger-menu-string-3"></span>
-      </button>
+        <a
+          href="https://www.linkedin.com/in/antonio-susio-9b2089226/"
+          target="_blank"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedinIn className="social-icon linkedin-icon" />
+        </a>
+
+        <a href={`mailto:antoniosusio@gmail.com`} aria-label="Send Email">
+          <SiGmail className="social-icon gmail-icon" />
+        </a>
+
+        <a
+          href="/Antonio Susio's CV EN.pdf"
+          download
+          aria-label="Download Resume"
+        >
+          <IoDocumentText className="social-icon cv-icon" />
+        </a>
+      </div>
     </header>
   );
+}
+
+{
 }

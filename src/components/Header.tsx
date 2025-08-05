@@ -7,8 +7,8 @@ import { IoDocumentText } from "react-icons/io5";
 export default function Header() {
   const [menu, setMenu] = React.useState<boolean>(false);
 
-  function openMenu() {
-    setMenu(true);
+  function toggleMenu() {
+    setMenu((prevState) => !prevState);
   }
 
   return (
@@ -20,16 +20,28 @@ export default function Header() {
         </div>
 
         <button
-          onClick={openMenu}
-          className="open-menu-button flex flex-col"
+          onClick={toggleMenu}
+          className="open-menu-button"
           aria-label="Open navigation menu"
         >
-          <span className="hamburger-menu-string-1"></span>
-          <span className="hamburger-menu-string-2"></span>
-          <span className="hamburger-menu-string-3"></span>
+          <span
+            className={`hamburger-menu-bar ${
+              menu ? "hamburger-menu-open-bar" : ""
+            }`}
+          ></span>
+          <span
+            className={`hamburger-menu-bar ${
+              menu ? "hamburger-menu-open-bar" : ""
+            }`}
+          ></span>
+          <span
+            className={`hamburger-menu-bar ${
+              menu ? "hamburger-menu-open-bar" : ""
+            }`}
+          ></span>
         </button>
 
-        <Navbar menu={menu} setMenu={setMenu} />
+        <Navbar menu={menu} toggleMenu={toggleMenu} />
       </div>
 
       <div className="social-container flex">

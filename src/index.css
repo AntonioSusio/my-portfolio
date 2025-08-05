@@ -121,7 +121,7 @@ p {
   padding: 2rem;
 }
 
-.hamburger-menu-string-1,
+/* .hamburger-menu-string-1,
 .hamburger-menu-string-2,
 .hamburger-menu-string-3 {
   width: 25px;
@@ -140,7 +140,7 @@ p {
   background-color: var(--secondary-color);
   align-self: center;
   margin-right: 0.3rem;
-}
+} */
 
 .about-section,
 .resume-section,
@@ -238,7 +238,33 @@ ul {
 }
 
 .open-menu-button {
-  gap: 0.3rem;
+  display: block;
+  z-index: 999;
+}
+
+.hamburger-menu-bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu-open-bar {
+  background-color: var(--primary-color);
+}
+
+.hamburger-menu-open-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu-open-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu-open-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 .social-container {

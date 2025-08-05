@@ -1,12 +1,11 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
 type MenuProps = {
   menu: boolean;
-  setMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleMenu: () => void;
 };
 
-export default function Navbar({ menu, setMenu }: MenuProps) {
+export default function Navbar({ menu, toggleMenu }: MenuProps) {
   const activeStyles = {
     fontSize: "1.5rem",
     fontWeight: "bold",
@@ -14,29 +13,17 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
     textShadow: "1px 1px 11px var(--primary-color)",
   };
 
-  function closeMenu() {
-    setMenu(false);
-  }
-
   return (
     <nav
       className={`header-navbar ${menu ? "menu-open" : ""} flex flex-col`}
       aria-label="Navigation menu"
     >
-      <button
-        className="close-menu-button"
-        onClick={closeMenu}
-        aria-label="Close navigation menu"
-      >
-        X
-      </button>
-
       <ul className="links-list flex flex-col">
         <li>
           <NavLink
             to="/"
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
-            onClick={closeMenu}
+            onClick={toggleMenu}
           >
             About Me
           </NavLink>
@@ -46,7 +33,7 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
           <NavLink
             to="resume"
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
-            onClick={closeMenu}
+            onClick={toggleMenu}
           >
             Resume
           </NavLink>
@@ -56,7 +43,7 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
           <NavLink
             to="projects"
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
-            onClick={closeMenu}
+            onClick={toggleMenu}
           >
             Projects
           </NavLink>
@@ -66,7 +53,7 @@ export default function Navbar({ menu, setMenu }: MenuProps) {
           <NavLink
             to="certificates"
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
-            onClick={closeMenu}
+            onClick={toggleMenu}
           >
             Certificates
           </NavLink>

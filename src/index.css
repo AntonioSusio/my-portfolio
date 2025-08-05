@@ -114,7 +114,6 @@ p {
   padding: 1rem 1.5rem;
 }
 
-.header-navbar,
 .resume-section,
 .projects-section,
 .certificates-section {
@@ -279,6 +278,7 @@ ul {
 
 /* Navbar */
 .header-navbar {
+  padding: 4rem;
   position: fixed;
   background-color: var(--secondary-color);
   height: 100vh;

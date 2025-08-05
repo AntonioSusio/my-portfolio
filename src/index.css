@@ -121,27 +121,6 @@ p {
   padding: 2rem;
 }
 
-/* .hamburger-menu-string-1,
-.hamburger-menu-string-2,
-.hamburger-menu-string-3 {
-  width: 25px;
-  height: 4px;
-  background-color: var(--secondary-color);
-}
-
-.heading-name::before,
-.resume-heading::before,
-.projects-heading::before,
-.certificates-heading::before {
-  content: '';
-  width: 15px;
-  height: 15px;
-  display: block;
-  background-color: var(--secondary-color);
-  align-self: center;
-  margin-right: 0.3rem;
-} */
-
 .about-section,
 .resume-section,
 .projects-section,

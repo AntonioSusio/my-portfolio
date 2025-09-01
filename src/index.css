@@ -215,6 +215,16 @@ ul {
   justify-content: space-between;
 }
 
+.header-right-div {
+  border: 1px solid red;
+  gap: 1.5rem;
+}
+
+.select-language-menu {
+  padding: 0.3rem;
+  margin: auto;
+}
+
 .open-menu-button {
   display: block;
   z-index: 999;

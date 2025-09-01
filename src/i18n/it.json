@@ -2,5 +2,9 @@
     "about": "Chi sono",
     "resume": "Curriculum",
     "projects": "Progetti",
-    "certificates": "Certificati"
+    "certificates": "Certificati",
+    "hello": "Ciao",
+    "I'm": "io sono",
+    "description": "Sono uno studente laureato in frontend sulla piattaforma Scrimba, con un particolare interesse nel migliorarmi costantemente e scoprire sempre nuove cose sul coding. Mi piacciono le sfide difficili, anche se richiedono tempo per essere risolte, perché amo trovare e analizzare nuovi approcci che non conosco per superarle. Mi piacciono i giochi di carte collezionabili, i giochi di strategia, il salto con la corda e sono un grande fan dei cannelloni (un piatto tipico napoletano). Ma soprattutto, mi piace ascoltare musica.",
+    "scrimba": "Clicca qui se vuoi saperne di più riguardo Scrimba"
 }

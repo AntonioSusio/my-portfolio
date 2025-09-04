@@ -44,9 +44,11 @@ export default function Projects(): JSX.Element {
         />
         <div className="project-info flex flex-col">
           <h2 className="project-name">{project.projectName}</h2>
-          <p className="project-description">{project.projectDescritpion}</p>
+          <p className="project-description">
+            {t(`project_description.${project.projectDescritpionId}`)}
+          </p>
 
-          <p className="technologies-paragraph">Techologies</p>
+          <p className="technologies-paragraph">{t("technologies")}</p>
           <ul className="technologies-container flex">
             {project.projectTechnologies.map((tech) => (
               <li key={tech} className="technology">

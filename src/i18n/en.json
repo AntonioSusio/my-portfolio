@@ -22,5 +22,30 @@
         "Frontend Developer Career Path certificate of completion": "Frontend Developer Career Path certificate of completion"
     },
 
-    "project_site": "Click here to see the project"
+    "project_site": "Click here to see the project",
+
+    "project_description": {
+        "vanlife_desc":
+            "A project based on the buying and selling of camper vans. React Routing method was used to navigate between pages and Authentication Required to access sections reserved only for logged-in users.",
+        
+        "quizzical_desc":
+            "A simple quiz app project where you have to answer five general knowledge questions.",
+
+        "watchlist_desc":
+            "A Watchlist application project where you can create your own list of movies or TV shows to watch.",
+        
+        "endgame_desc":
+            "This project is very similar to the game of Hangman. You have 8 lives. Each life is represented by a different programming technology. Try not to lose your favorite!",
+        
+        "tenzies_desc":
+            "A project that represents a game where you have to win by finding the same number on all the dices. Will you be lucky quickly?",
+
+        "meme_desc":
+            "A simple project that generates random memes and allows you to write what you'd like to be shown on the image. Let your creativity flow!",
+
+        "travel_desc":
+            "A simple static project built with React depicting my travel journal with all the destinations I would like to visit."
+    },
+
+    "technologies": "Technologies"
 }

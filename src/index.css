@@ -31,7 +31,7 @@ body {
 .email-paragraph,
 .footer-text,
 .scrimba-link,
-.select-language-menu
+.select-language-menu,
 .technologies-paragraph,
 .technology,
 .project-link,
@@ -223,6 +223,7 @@ ul {
 .select-language-menu {
   all: unset;
   display: flex;
+  cursor: pointer;
   align-items: center;
   background-color: var(--secondary-color);
   color: var(--primary-color);

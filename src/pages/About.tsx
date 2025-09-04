@@ -1,7 +1,10 @@
 import type { JSX } from "react";
 import data from "../aboutMeData";
+import { useTranslation } from "react-i18next";
 
 export default function About(): JSX.Element {
+  const { t } = useTranslation();
+
   return (
     <section className="about-section flex flex-col">
       <div className="description-card flex flex-col">
@@ -16,9 +19,12 @@ export default function About(): JSX.Element {
         </h1>
         <div className="description-container flex flex-col">
           <h2 className="about-presentation">
-            <span>Hello,</span> <span>I'm {data.name}</span>
+            <span>{t("hello")},</span>{" "}
+            <span>
+              {t("I'm")} {data.name}
+            </span>
           </h2>
-          <p className="about-description">{data.description}</p>
+          <p className="about-description">{t("description")}</p>
         </div>
 
         <div className="scrimba-link-container flex">
@@ -27,7 +33,7 @@ export default function About(): JSX.Element {
             className="scrimba-link"
             target="_blank"
           >
-            Click here if you want discover about Scrimba
+            {t("scrimba")}
           </a>
         </div>
 

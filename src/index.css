@@ -31,6 +31,7 @@ body {
 .email-paragraph,
 .footer-text,
 .scrimba-link,
+.select-language-menu,
 .technologies-paragraph,
 .technology,
 .project-link,
@@ -213,6 +214,24 @@ ul {
   width: 100%;
   align-items: center;
   justify-content: space-between;
+}
+
+.header-right-div {
+  gap: 0.5rem;
+}
+
+.select-language-menu {
+  all: unset;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  margin: auto;
+  text-align: center;
+  width: 40px;
+  height: 30px;
+  border-radius: 8px;
 }
 
 .open-menu-button {
@@ -570,6 +589,10 @@ ul {
   .resume-section,
   .projects-section {
     width: 70%;
+  }
+
+  .header-right-div {
+    gap: 4rem;
   }
 
   .main-section {

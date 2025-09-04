@@ -1,24 +1,25 @@
 import React from "react";
 import type { JSX } from "react";
+import { useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import type { Project } from "../projects";
 import projectsData from "../projects";
 import { FaArrowUp } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function Projects(): JSX.Element {
   const [projects, setProjects] = React.useState<Project[]>([]);
   const { ref: myRef, inView: myElementIsVisible } = useInView();
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  const { t } = useTranslation();
 
   React.useEffect((): void => {
     setProjects(projectsData);
   }, []);
 
   function scrollToTop(): void {
-    const scrollContainer: Element | null =
-      document.querySelector(".projects-section");
-    if (scrollContainer) {
-      scrollContainer.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    sectionRef.current?.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   const anchorEl: JSX.Element[] = projects.map(
@@ -43,9 +44,11 @@ export default function Projects(): JSX.Element {
         />
         <div className="project-info flex flex-col">
           <h2 className="project-name">{project.projectName}</h2>
-          <p className="project-description">{project.projectDescritpion}</p>
+          <p className="project-description">
+            {t(`project_description.${project.projectDescritpionId}`)}
+          </p>
 
-          <p className="technologies-paragraph">Techologies</p>
+          <p className="technologies-paragraph">{t("technologies")}</p>
           <ul className="technologies-container flex">
             {project.projectTechnologies.map((tech) => (
               <li key={tech} className="technology">
@@ -55,7 +58,7 @@ export default function Projects(): JSX.Element {
           </ul>
 
           <a href={project.projectUrl} target="_blank" className="project-link">
-            Click here to visit project site
+            {t("project_site")}
           </a>
         </div>
       </div>
@@ -63,9 +66,9 @@ export default function Projects(): JSX.Element {
   );
 
   return (
-    <section className="projects-section flex flex-col">
+    <section ref={sectionRef} className="projects-section flex flex-col">
       <h1 ref={myRef} id="projects-heading" className="projects-heading flex">
-        Projects
+        {t("projects")}
       </h1>
 
       <div className="anchor-page-links-container flex">{anchorEl}</div>

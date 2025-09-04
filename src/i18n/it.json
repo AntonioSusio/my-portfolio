@@ -1,0 +1,51 @@
+{
+    "about": "Chi sono",
+    "resume": "Curriculum",
+    "projects": "Progetti",
+    "certificates": "Certificati",
+    "hello": "Ciao",
+    "I'm": "io sono",
+    "description": "Sono uno studente laureato in frontend sulla piattaforma Scrimba, con un particolare interesse nel migliorarmi costantemente e scoprire sempre nuove cose sul coding. Mi piacciono le sfide difficili, anche se richiedono tempo per essere risolte, perché amo trovare e analizzare nuovi approcci che non conosco per superarle. Mi piacciono i giochi di carte collezionabili, i giochi di strategia, il salto con la corda e sono un grande fan dei cannelloni (un piatto tipico napoletano). Ma soprattutto, mi piace ascoltare musica.",
+    "scrimba": "Clicca qui se vuoi saperne di più riguardo Scrimba",
+    "cities": {
+        "Naples,": "Napoli",
+        "Online platform": "Piattaforma online"
+    },
+    "countries": {
+        "Italy": "Italia"
+    },
+
+    "eqfLevel": "Livello EQF",
+
+    "resumes": {
+        "High School Diploma in Computer Science and Telecommunications": "Diploma di scuola superiore in Informatica & Telecomunicazioni",
+        "Frontend Developer Career Path certificate of completion": "Certificato di completamento percorso Frontend"
+    },
+    
+    "project_site": "Clicca qui per vedere il progetto",
+
+    "project_description": {
+        "vanlife_desc":
+            "Un progetto basato sull’acquisto e la vendita di camper. È stato utilizzato il metodo React Routing per navigare tra le pagine e l’accesso alle sezioni riservate solo agli utenti registrati richiede l’autenticazione.",
+        
+        "quizzical_desc":
+            "Un semplice progetto di app quiz in cui devi rispondere a cinque domande di cultura generale.",
+
+        "watchlist_desc":
+            "Un progetto di applicazione Watchlist in cui puoi creare la tua lista di film o programmi TV da guardare.",
+        
+        "endgame_desc":
+            "Questo progetto è molto simile al gioco dell'impiccato. Hai 8 vite. Ogni vita è rappresentata da una diversa tecnologia di programmazione. Cerca di non perdere la tua preferita!",
+        
+        "tenzies_desc":
+            "Un progetto che rappresenta un gioco in cui devi vincere trovando lo stesso numero su tutti i dadi. Sarai fortunato subito?",
+
+        "meme_desc":
+            "Un semplice progetto che genera meme casuali e ti permette di scrivere ciò che desideri venga mostrato sull'immagine. Lascia andare la tua creatività!",
+
+        "travel_desc":
+            "Un semplice progetto statico realizzato con React che rappresenta il mio diario di viaggio con tutte le destinazioni che mi piacerebbe visitare."
+    },
+
+    "technologies": "Tecnologie"
+}

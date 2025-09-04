@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 type MenuProps = {
   menu: boolean;
@@ -6,6 +7,8 @@ type MenuProps = {
 };
 
 export default function Navbar({ menu, toggleMenu }: MenuProps) {
+  const { t } = useTranslation();
+
   const activeStyles = {
     fontSize: "1.5rem",
     fontWeight: "bold",
@@ -25,7 +28,7 @@ export default function Navbar({ menu, toggleMenu }: MenuProps) {
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
             onClick={toggleMenu}
           >
-            About Me
+            {t("about")}
           </NavLink>
         </li>
 
@@ -35,7 +38,7 @@ export default function Navbar({ menu, toggleMenu }: MenuProps) {
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
             onClick={toggleMenu}
           >
-            Resume
+            {t("resume")}
           </NavLink>
         </li>
 
@@ -45,7 +48,7 @@ export default function Navbar({ menu, toggleMenu }: MenuProps) {
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
             onClick={toggleMenu}
           >
-            Projects
+            {t("projects")}
           </NavLink>
         </li>
 
@@ -55,7 +58,7 @@ export default function Navbar({ menu, toggleMenu }: MenuProps) {
             style={({ isActive }) => (isActive ? activeStyles : undefined)}
             onClick={toggleMenu}
           >
-            Certificates
+            {t("certificates")}
           </NavLink>
         </li>
       </ul>

@@ -32,8 +32,8 @@ export default function Header() {
             className="select-language-menu"
             onChange={handleLanguageChange}
           >
-            <option value="en">EN</option>
-            <option value="it">IT</option>
+            <option value="en">English</option>
+            <option value="it">Italian</option>
           </select>
 
           <button

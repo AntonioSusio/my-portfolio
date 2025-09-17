@@ -84,7 +84,7 @@ export default function Header() {
         </a>
 
         <a
-          href="/Antonio Susio's CV EN.pdf"
+          href="/AntonioSusioCurriculumENG.pdf"
           download
           aria-label="Download Resume"
         >

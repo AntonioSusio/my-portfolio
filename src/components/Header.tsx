@@ -11,7 +11,7 @@ export default function Header() {
 
   const { i18n } = useTranslation();
 
-  function handleLanguageChange(e: any): void {
+  function handleLanguageChange(e: React.ChangeEvent<HTMLSelectElement>): void {
     const selectedLanguage = e.target.value;
     i18n.changeLanguage(selectedLanguage);
     setCvLanguage(selectedLanguage);

@@ -7,12 +7,14 @@ import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const [menu, setMenu] = React.useState<boolean>(false);
+  const [cvLanguage, setCvLanguage] = React.useState<string>("");
 
   const { i18n } = useTranslation();
 
   function handleLanguageChange(e: any): void {
     const selectedLanguage = e.target.value;
     i18n.changeLanguage(selectedLanguage);
+    setCvLanguage(selectedLanguage);
   }
 
   function toggleMenu() {
@@ -84,7 +86,7 @@ export default function Header() {
         </a>
 
         <a
-          href="/Antonio Susio's CV EN.pdf"
+          href={cvLanguage === "en" ? "/AntonioSusioCurriculumENG.pdf" : "/AntonioSusioCurriculumITA.pdf"}
           download
           aria-label="Download Resume"
         >
@@ -93,7 +95,4 @@ export default function Header() {
       </div>
     </header>
   );
-}
-
-{
 }

@@ -86,7 +86,7 @@ export default function Header() {
         </a>
 
         <a
-          href={cvLanguage === "en" ? "/AntonioSusioCurriculumENG.pdf" : "/AntonioSusioCurriculumITA.pdf"}
+          href={cvLanguage === "it" ? "/AntonioSusioCurriculumITA.pdf" : "/AntonioSusioCurriculumENG.pdf"}
           download
           aria-label="Download Resume"
         >

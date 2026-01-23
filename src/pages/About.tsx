@@ -10,7 +10,7 @@ export default function About(): JSX.Element {
       <div className="description-card flex flex-col">
         <img
           className="card-image"
-          src="/Antonio.jpg"
+          src="/Antonio2.png"
           alt="Antonio smiling and looking at the camera"
         />
 

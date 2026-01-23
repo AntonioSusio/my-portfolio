@@ -348,6 +348,7 @@ ul {
 
 .card-image {
   width: 250px;
+  height: auto;
   border: 8px solid var(--primary-color);
   border-radius: 50%;
 }
